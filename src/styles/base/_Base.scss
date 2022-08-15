@@ -1,0 +1,93 @@
+@font-face {
+   font-family: "Noto Sans TC";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("/assets/fonts/NotoSansCJKtc-Regular.otf");
+}
+
+@font-face {
+   font-family: "Noto Sans TC";
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("/assets/fonts/NotoSansCJKtc-Bold.otf");
+}
+
+* {
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   font-family: "Noto Sas TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+
+   &:focus {
+      outline: none;
+   }
+
+   &:visited {
+      color: inherit;
+   }
+}
+
+main {
+   margin: auto;
+   padding: 20px 10px;
+}
+
+textarea {
+   border-radius: 3px;
+   display: block;
+   width: 100%;
+   min-height: 60px;
+   max-height: 200px;
+}
+
+h1 {
+   @include font-size(4xl);
+   font-weight: bold;
+}
+
+h2 {
+   @include font-size(3xl);
+   font-weight: bold;
+}
+
+h3 {
+   @include font-size(2xl);
+   font-weight: bold;
+}
+
+h4 {
+   @include font-size(lg);
+}
+
+h5 {
+   @include font-size(base);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
