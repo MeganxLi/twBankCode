@@ -1,7 +1,13 @@
 :root {
+  --light-0: #F6F8FC;
+  --dark-0:#2E2D3A;
+  --background: var(--light-0);
+  --text:var(--dark-0);
 }
 
 .dark-mode {
+  --background: var(--dark-0);
+  --text:var(--light-0);
 }
 
 // font size
