@@ -1,13 +1,27 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { MoonIcon } from "@zhuowenli/vue-feather-icons";
+import { MoonIcon, SunIcon, ActivityIcon } from "@zhuowenli/vue-feather-icons";
+
+const bEnabled = ref<boolean>(false);
+
+const chagneEnable = function () {
+   bEnabled.value = !bEnabled.value;
+
+   if (bEnabled.value) {
+      document.querySelector("html")?.classList.add("dark-mode");
+   } else {
+      document.querySelector("html")?.classList.remove("dark-mode");
+   }
+};
 </script>
 
 <template>
    <header id="Header">
-      <ul class="header-nav">
-         <li>GitHub</li>
-         <li><MoonIcon size="1.5x" fill="currentColor" /></li>
-      </ul>
+      <a href="">GitHub</a>
+
+      <button @click="chagneEnable">
+         <MoonIcon v-show="!bEnabled" size="1.5x" fill="currentColor" />
+         <SunIcon v-show="bEnabled" size="1.5x" fill="currentColor" />
+      </button>
    </header>
 </template>
