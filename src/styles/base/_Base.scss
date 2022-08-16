@@ -60,29 +60,6 @@ textarea {
    max-height: 200px;
 }
 
-h1 {
-   @include font-size(4xl);
-   font-weight: bold;
-}
-
-h2 {
-   @include font-size(3xl);
-   font-weight: bold;
-}
-
-h3 {
-   @include font-size(2xl);
-   font-weight: bold;
-}
-
-h4 {
-   @include font-size(lg);
-}
-
-h5 {
-   @include font-size(base);
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
    -webkit-appearance: none;
