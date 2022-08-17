@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   :root {
+      --light-0: #f6f8fc;
+      --dark-0: #2e2d3a;
+      --background: var(--light-0);
+      --text: var(--dark-0);
+   }
+   .dark {
+      --background: var(--dark-0);
+      --text: var(--light-0);
+   }
+}
