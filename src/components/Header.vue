@@ -8,9 +8,9 @@ const chagneEnable = function () {
    bEnabled.value = !bEnabled.value;
 
    if (bEnabled.value) {
-      document.querySelector("html")?.classList.add("dark-mode");
+      document.querySelector("html")?.classList.add("dark");
    } else {
-      document.querySelector("html")?.classList.remove("dark-mode");
+      document.querySelector("html")?.classList.remove("dark");
    }
 };
 </script>
