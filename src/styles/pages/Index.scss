@@ -6,4 +6,8 @@
       @apply grid items-center grid-cols-[max-content_auto_max-content] gap-2;
       @apply w-full max-w-3xl;
    }
+   .search-icon,
+   .clean-icon {
+      @apply text-light-272643 opacity-50;
+   }
 }
