@@ -21,6 +21,10 @@ module.exports = {
                "242E42": "#242E42",
             },
          },
+         dropShadow: {
+            serch: ["0px 1px 2px rgba(0, 0, 0, 0.06)", "0px 1px 3px rgba(0, 0, 0, 0.1)"],
+            list: "0px 8px 8px rgba(0, 0, 0, 0.05)",
+         },
       },
    },
    variants: {
