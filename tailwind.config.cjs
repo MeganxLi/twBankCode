@@ -7,18 +7,18 @@ module.exports = {
       extend: {
          colors: {
             light: {
-               FFFFFF: "var(--light-0)",
-               F6F8FC: "var(--light-100)",
-               ACD5ED: "var(--light-300)",
-               "2C698D": "var(--light-600)",
-               272643: "var(--light-800)",
+               FFFFFF: "#FFFFFF",
+               F6F8FC: "#F6F8FC",
+               ACD5ED: "#ACD5ED",
+               "2C698D": "#2c698d",
+               272643: "#272643",
             },
             dark: {
-               E3F6F5: "var(--dark-0)",
-               BAE8E8: "var(--dark-100)",
-               "4A84A6": "var(--dark-300)",
-               "2E3A50": "var(--dark-600)",
-               "242E42": "var(--dark-800)",
+               E3F6F5: "#E3F6F5",
+               BAE8E8: "#BAE8E8",
+               "4A84A6": "#4A84A6",
+               "2E3A50": "#2E3A50",
+               "242E42": "#242E42",
             },
          },
       },
