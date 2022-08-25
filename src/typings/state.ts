@@ -4,4 +4,5 @@ interface BankCodeType {
    en_name: string;
    link?: string;
    tag?: string;
+   nickname?: string[];
 }
