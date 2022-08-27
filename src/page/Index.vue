@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
+import { BankData } from "../utils/BankData";
 
 const serchVal = ref<string>();
 </script>
@@ -24,16 +25,20 @@ const serchVal = ref<string>();
       </div>
       {{ serchVal }}
       <ol class="list">
-         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in 8" :key="item">
+         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankData" :key="item">
             <fieldset>
                <div class="flex justify-between items-center pb-3">
-                  <span class="text-xl font-medium text-light-2C698D">001</span>
-                  <a class="bg-light-2C698D/10 rounded-full p-1"
+                  <span class="text-xl font-medium text-light-2C698D">{{ item.code }}</span>
+                  <a
+                     class="bg-light-2C698D/10 rounded-full p-1"
+                     target="_blank"
+                     :href="item.link"
+                     :class="{ hidden: item.link === undefined }"
                      ><LinkIcon size="0.9x" class="text-light-2C698D/70"
                   /></a>
                </div>
-               <p class="text-base">中文</p>
-               <p class="text-base">英文</p>
+               <p class="text-base">{{ item.cn_name }}</p>
+               <p class="text-base text-gray-400">{{ item.en_name }}</p>
             </fieldset>
          </li>
       </ol>
