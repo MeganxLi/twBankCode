@@ -8,20 +8,20 @@ const chagneEnable = function () {
    bEnabled.value = !bEnabled.value;
 
    if (bEnabled.value) {
-      document.querySelector("html")?.classList.add("dark-mode");
+      document.querySelector("html")?.classList.add("dark");
    } else {
-      document.querySelector("html")?.classList.remove("dark-mode");
+      document.querySelector("html")?.classList.remove("dark");
    }
 };
 </script>
 
 <template>
-   <header id="Header">
+   <header id="Header" class="dark:text-dark-BAE8E8">
       <a href="">GitHub</a>
 
       <button @click="chagneEnable">
          <MoonIcon v-show="!bEnabled" size="1.5x" fill="currentColor" />
-         <SunIcon v-show="bEnabled" size="1.5x" fill="currentColor" />
+         <SunIcon v-show="bEnabled" size="1.5x" />
       </button>
    </header>
 </template>

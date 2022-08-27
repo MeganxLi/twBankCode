@@ -1,0 +1,20 @@
+@layer utilities {
+   :root {
+      --light-0: #ffffff;
+      --light-100: #f6f8fc;
+      --light-300: #acd5ed;
+      --light-600: #2c698d;
+      --light-800: #272643;
+      --dark-0: #e3f6f5;
+      --dark-100: #bae8e8;
+      --dark-300: #4a84a6;
+      --dark-600: #2e3a50;
+      --dark-800: #242e42;
+      --background: var(--light-100);
+      --text: var(--light-800);
+   }
+   .dark {
+      --background: var(--dark-800);
+      --text: var(--dark-0);
+   }
+}

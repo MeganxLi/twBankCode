@@ -1,0 +1,20 @@
+@layer components {
+   .serch-container {
+      @apply text-lg;
+      @apply px-3 py-3 my-0 mx-auto rounded-lg;
+      @apply bg-light-FFFFFF text-light-272643;
+      @apply focus-within:outline focus-within:outline-[1px] focus-within:outline-light-ACD5ED;
+      @apply grid items-center grid-cols-[max-content_auto_max-content] gap-2;
+      @apply w-full max-w-3xl;
+   }
+   .search-icon,
+   .clean-icon {
+      @apply text-light-272643/75;
+   }
+
+   .list {
+      @apply mt-20;
+      @apply grid gap-4 gap-x-8 gap-y-10;
+      @apply xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2;
+   }
+}

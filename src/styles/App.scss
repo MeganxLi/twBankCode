@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // utils
 @import "utils/Variables";
 
@@ -9,3 +13,4 @@
 @import "components/Header";
 
 // pages
+@import "pages/Index";
