@@ -892,7 +892,7 @@ export const BankData: BankCodeType[] = [
       link: "https://www.hcfarm.org.tw/",
       tag: BankType.Farmers,
    },
-   { code: "620", cn_name: "滿州鄉農會|", en_name: undefined, link: "https://manzhou.com.tw/", tag: BankType.Farmers },
+   { code: "620", cn_name: "滿州鄉農會", en_name: undefined, link: "https://manzhou.com.tw/", tag: BankType.Farmers },
    { code: "620", cn_name: "新埤鄉農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
    {
       code: "620",
