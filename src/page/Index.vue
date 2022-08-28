@@ -3,7 +3,11 @@ import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
 import { BankData } from "../utils/BankData";
 
-const serchVal = ref<string>();
+const searchInput = ref<string>();
+
+const BankCodeSort = BankData.sort(function (a, b) {
+   return a.code - b.code;
+});
 </script>
 
 <template>
@@ -14,18 +18,18 @@ const serchVal = ref<string>();
             type="text"
             placeholder="搜尋台灣銀行"
             class="search-input placeholder:text-slate-400"
-            v-model="serchVal"
+            v-model="searchInput"
          />
          <span
             class="clean-icon cursor-pointer"
-            @click="serchVal = undefined"
-            :class="{ '!hidden': serchVal === undefined }"
+            @click="searchInput = undefined"
+            :class="{ '!hidden': searchInput === undefined }"
             ><XIcon size="1.5x"
          /></span>
       </div>
-      {{ serchVal }}
+      {{ searchInput }}
       <ol class="list">
-         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankData" :key="item">
+         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankCodeSort" :key="item">
             <fieldset>
                <div class="flex justify-between items-center pb-3">
                   <span class="text-xl font-medium text-light-2C698D">{{ item.code }}</span>
