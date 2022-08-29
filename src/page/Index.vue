@@ -8,6 +8,19 @@ const searchInput = ref<string>();
 const BankCodeSort = BankData.sort(function (a, b) {
    return a.code - b.code;
 });
+
+const serchVal = () => {
+   if (searchInput.value !== undefined) searchInput.value.trim().toLowerCase();
+};
+
+const BankCodeFiltered = () => {
+   if (searchInput.value === undefined) return BankCodeSort;
+   return BankCodeSort.filter((list: BankCodeType) => {
+      return Object.keys(list).some((item: string) =>
+         list[item].toLowerCase().includes(searchInput.value.trim().toLowerCase())
+      );
+   });
+};
 </script>
 
 <template>
@@ -28,8 +41,9 @@ const BankCodeSort = BankData.sort(function (a, b) {
          /></span>
       </div>
       {{ searchInput }}
+
       <ol class="list">
-         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankCodeSort" :key="item">
+         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankCodeFiltered()" :key="item">
             <fieldset>
                <div class="flex justify-between items-center pb-3">
                   <span class="text-xl font-medium text-light-2C698D">{{ item.code }}</span>
