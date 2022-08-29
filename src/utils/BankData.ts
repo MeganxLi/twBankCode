@@ -405,21 +405,18 @@ export const BankData: BankCodeType[] = [
    {
       code: "517",
       cn_name: "南市區漁會",
-      en_name: undefined,
       link: "https://www.fast.org.tw/d50/index.html",
       tag: BankType.Fisherperson,
    },
    {
       code: "518",
       cn_name: "南縣區漁會",
-      en_name: undefined,
       link: "https://nanxianfa.com/",
       tag: BankType.Fisherperson,
    },
    {
       code: "521",
       cn_name: "高雄市彌陀區漁會",
-      en_name: undefined,
       link: "http://www.mituo2011.com/",
       tag: BankType.Fisherperson,
    },
@@ -430,18 +427,16 @@ export const BankData: BankCodeType[] = [
       link: "http://www.yafa.org.tw/",
       tag: BankType.Fisherperson,
    },
-   { code: "521", cn_name: "興達港區漁會", en_name: undefined, link: undefined, tag: BankType.Fisherperson },
+   { code: "521", cn_name: "興達港區漁會", tag: BankType.Fisherperson },
    {
       code: "521",
       cn_name: "林園區漁會",
-      en_name: undefined,
       link: "http://www.naffic.org.tw/default2.aspx?EpfJdId9UuAsXUMmgmlARNMWj4N6%2FX9m",
       tag: BankType.Fisherperson,
    },
    {
       code: "523",
       cn_name: "東港區漁會",
-      en_name: undefined,
       link: "http://www.tkfisher.org.tw/default2.aspx?EpfJdId9UuCM43XlWesODXH2pjBjmdrr",
       tag: BankType.Fisherperson,
    },
@@ -455,21 +450,18 @@ export const BankData: BankCodeType[] = [
    {
       code: "523",
       cn_name: "林邊區漁會",
-      en_name: undefined,
       link: "http://www.linfish.org.tw/",
       tag: BankType.Fisherperson,
    },
    {
       code: "524",
       cn_name: "新港區漁會",
-      en_name: undefined,
       link: "https://kuroshiofish.org.tw/",
       tag: BankType.Fisherperson,
    },
    {
       code: "525",
       cn_name: "澎湖區漁會",
-      en_name: undefined,
       link: "https://penghu-fisher.org.tw/",
       tag: BankType.Fisherperson,
    },
@@ -483,21 +475,18 @@ export const BankData: BankCodeType[] = [
    {
       code: "613",
       cn_name: "名間鄉農會",
-      en_name: undefined,
       link: "http://www.miji.org.tw/main.asp",
       tag: BankType.Farmers,
    },
    {
       code: "614",
       cn_name: "永靖鄉農會",
-      en_name: undefined,
       link: "http://www.yjfarmer.org.tw/default2.aspx?EpfJdId9UuCJctf5vXgyGjTtWy1gfOX9",
       tag: BankType.Farmers,
    },
    {
       code: "614",
       cn_name: "秀水鄉農會",
-      en_name: undefined,
       link: "http://www.hsfarm.org.tw/default2.aspx?EpfJdId9UuDNTO91R3HUNleLPygPwIYO",
       tag: BankType.Farmers,
    },
@@ -525,7 +514,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "614",
       cn_name: "埤頭鄉農會",
-      en_name: undefined,
       link: "http://www.pitou.org.tw/main.asp",
       tag: BankType.Farmers,
    },
@@ -543,7 +531,7 @@ export const BankData: BankCodeType[] = [
       link: "http://www.sihu.org.tw/default.asp",
       tag: BankType.Farmers,
    },
-   { code: "616", cn_name: "大埤鄉農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "616", cn_name: "大埤鄉農會", tag: BankType.Farmers },
    {
       code: "616",
       cn_name: "二崙鄉農會",
@@ -561,7 +549,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "616",
       cn_name: "莿桐鄉農會",
-      en_name: undefined,
       link: "http://www.ctgo.org.tw/index.html",
       tag: BankType.Farmers,
    },
@@ -572,12 +559,11 @@ export const BankData: BankCodeType[] = [
       link: "http://www.naffic.org.tw/default2.aspx?EpfJdId9UuAsXUMmgmlARHG6TAHWwkQV",
       tag: BankType.Farmers,
    },
-   { code: "616", cn_name: "斗六市農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
-   { code: "616", cn_name: "西螺鎮農會", en_name: undefined, link: "http://www.slofa.org/", tag: BankType.Farmers },
+   { code: "616", cn_name: "斗六市農會", tag: BankType.Farmers },
+   { code: "616", cn_name: "西螺鎮農會", link: "http://www.slofa.org/", tag: BankType.Farmers },
    {
       code: "616",
       cn_name: "虎尾鎮農會",
-      en_name: undefined,
       link: "http://www.hwfa.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
@@ -598,7 +584,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "616",
       cn_name: "古坑鄉農會",
-      en_name: undefined,
       link: "http://www.gkcafe.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
@@ -616,7 +601,7 @@ export const BankData: BankCodeType[] = [
       link: "https://www.fast.org.tw/q15/",
       tag: BankType.Farmers,
    },
-   { code: "617", cn_name: "朴子市農會", en_name: undefined, link: "http://www.polon.org.tw/", tag: BankType.Farmers },
+   { code: "617", cn_name: "朴子市農會", link: "http://www.polon.org.tw/", tag: BankType.Farmers },
    {
       code: "617",
       cn_name: "太保市農會",
@@ -648,7 +633,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "617",
       cn_name: "溪口鄉農會",
-      en_name: undefined,
       link: "http://www.xikou.org.tw/main.aspx",
       tag: BankType.Farmers,
    },
@@ -662,11 +646,10 @@ export const BankData: BankCodeType[] = [
    {
       code: "617",
       cn_name: "布袋鎮農會",
-      en_name: undefined,
       link: "http://www.bdfa.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
-   { code: "617", cn_name: "東石鄉農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "617", cn_name: "東石鄉農會", tag: BankType.Farmers },
    {
       code: "617",
       cn_name: "新港鄉農會",
@@ -677,7 +660,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "617",
       cn_name: "大林鎮農會",
-      en_name: undefined,
       link: "http://dalin.naffic.org.tw/default2.aspx?EpfJdId9UuA2OTk3x3xRf3obB0%2bBcm3j",
       tag: BankType.Farmers,
    },
@@ -691,7 +673,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "617",
       cn_name: "嘉義縣農會",
-      en_name: undefined,
       link: "http://www.cyfa.org.tw/show.asp",
       tag: BankType.Farmers,
    },
@@ -705,12 +686,11 @@ export const BankData: BankCodeType[] = [
    {
       code: "617",
       cn_name: "義竹鄉農會",
-      en_name: undefined,
       link: "http://www.yijhu.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
-   { code: "618", cn_name: "歸仁區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
-   { code: "618", cn_name: "六甲區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "618", cn_name: "歸仁區農會", tag: BankType.Farmers },
+   { code: "618", cn_name: "六甲區農會", tag: BankType.Farmers },
    {
       code: "618",
       cn_name: "善化區農會",
@@ -721,21 +701,18 @@ export const BankData: BankCodeType[] = [
    {
       code: "618",
       cn_name: "西港區農會",
-      en_name: undefined,
       link: "http://www.sgfa.org.tw/index.asp",
       tag: BankType.Farmers,
    },
    {
       code: "618",
       cn_name: "北門區農會",
-      en_name: undefined,
       link: "http://www.beimen.org.tw/index.asp#",
       tag: BankType.Farmers,
    },
    {
       code: "618",
       cn_name: "佳里區農會",
-      en_name: undefined,
       link: "http://www.jlfa.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
@@ -756,7 +733,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "618",
       cn_name: "新營區農會",
-      en_name: undefined,
       link: "http://www.sinying.org.tw/",
       tag: BankType.Farmers,
    },
@@ -774,7 +750,7 @@ export const BankData: BankCodeType[] = [
       link: "http://www.ycfa.org.tw",
       tag: BankType.Farmers,
    },
-   { code: "619", cn_name: "鳳山區農會", en_name: undefined, link: "http://www.fsfa.org.tw/", tag: BankType.Farmers },
+   { code: "619", cn_name: "鳳山區農會", link: "http://www.fsfa.org.tw/", tag: BankType.Farmers },
    {
       code: "619",
       cn_name: "阿蓮區農會",
@@ -803,7 +779,7 @@ export const BankData: BankCodeType[] = [
       link: "https://www.fast.org.tw/s07/",
       tag: BankType.Farmers,
    },
-   { code: "619", cn_name: "鳥松區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "619", cn_name: "鳥松區農會", tag: BankType.Farmers },
    {
       code: "619",
       cn_name: "梓官區農會",
@@ -814,7 +790,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "619",
       cn_name: "林園區農會",
-      en_name: undefined,
       link: "https://www.fast.org.tw/s20/",
       tag: BankType.Farmers,
    },
@@ -825,7 +800,7 @@ export const BankData: BankCodeType[] = [
       link: "https://www.dlfa.com.tw/",
       tag: BankType.Farmers,
    },
-   { code: "619", cn_name: "橋頭區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "619", cn_name: "橋頭區農會", tag: BankType.Farmers },
    {
       code: "619",
       cn_name: "燕巢區農會",
@@ -840,27 +815,24 @@ export const BankData: BankCodeType[] = [
       link: "https://oscar.fast.org.tw/",
       tag: BankType.Farmers,
    },
-   { code: "619", cn_name: "湖內區農會", en_name: undefined, link: "http://www.hunei.org.tw/", tag: BankType.Farmers },
-   { code: "619", cn_name: "路竹區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
-   { code: "619", cn_name: "彌陀區農會", en_name: undefined, link: "http://www.mituo2011.com/", tag: BankType.Farmers },
+   { code: "619", cn_name: "湖內區農會", link: "http://www.hunei.org.tw/", tag: BankType.Farmers },
+   { code: "619", cn_name: "路竹區農會", tag: BankType.Farmers },
+   { code: "619", cn_name: "彌陀區農會", link: "http://www.mituo2011.com/", tag: BankType.Farmers },
    {
       code: "619",
       cn_name: "甲仙地區農會",
-      en_name: undefined,
       link: "http://www.jxfa.org.tw/index.asp",
       tag: BankType.Farmers,
    },
    {
       code: "619",
       cn_name: "杉林區農會",
-      en_name: undefined,
       link: "http://www.sl-fa.org.tw/Default.aspx",
       tag: BankType.Farmers,
    },
    {
       code: "619",
       cn_name: "旗山區農會",
-      en_name: undefined,
       link: "http://www.chisun.org.tw/Default.asp",
       tag: BankType.Farmers,
    },
@@ -888,12 +860,11 @@ export const BankData: BankCodeType[] = [
    {
       code: "620",
       cn_name: "恆春鎮農會",
-      en_name: undefined,
       link: "https://www.hcfarm.org.tw/",
       tag: BankType.Farmers,
    },
-   { code: "620", cn_name: "滿州鄉農會", en_name: undefined, link: "https://manzhou.com.tw/", tag: BankType.Farmers },
-   { code: "620", cn_name: "新埤鄉農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "620", cn_name: "滿州鄉農會", link: "https://manzhou.com.tw/", tag: BankType.Farmers },
+   { code: "620", cn_name: "新埤鄉農會", tag: BankType.Farmers },
    {
       code: "620",
       cn_name: "枋山地區農會",
@@ -911,7 +882,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "620",
       cn_name: "里港鄉農會",
-      en_name: undefined,
       link: "http://www.lgfa.org.tw/index.htm",
       tag: BankType.Farmers,
    },
@@ -925,21 +895,18 @@ export const BankData: BankCodeType[] = [
    {
       code: "620",
       cn_name: "崁頂鄉農會",
-      en_name: undefined,
       link: "http://www.ktfa.org.tw/main.asp",
       tag: BankType.Farmers,
    },
    {
       code: "620",
       cn_name: "麟洛鄉農會",
-      en_name: undefined,
       link: "https://www.fast.org.tw/t10/",
       tag: BankType.Farmers,
    },
    {
       code: "620",
       cn_name: "琉球鄉農會",
-      en_name: undefined,
       link: "https://www.fast.org.tw/t21/",
       tag: BankType.Farmers,
    },
@@ -967,11 +934,10 @@ export const BankData: BankCodeType[] = [
    {
       code: "621",
       cn_name: "吉安鄉農會",
-      en_name: undefined,
       link: "http://www.ji-an.org.tw/main.asp",
       tag: BankType.Farmers,
    },
-   { code: "621", cn_name: "新秀地區農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "621", cn_name: "新秀地區農會", tag: BankType.Farmers },
    {
       code: "622",
       cn_name: "太麻里地區農會",
@@ -1003,7 +969,6 @@ export const BankData: BankCodeType[] = [
    {
       code: "622",
       cn_name: "關山鎮農會",
-      en_name: undefined,
       link: "http://www.ksfa.org.tw/default.asp",
       tag: BankType.Farmers,
    },
@@ -1017,15 +982,13 @@ export const BankData: BankCodeType[] = [
    {
       code: "622",
       cn_name: "鹿野地區農會",
-      en_name: undefined,
       link: "http://www.luyeah.com.tw/default.asp",
       tag: BankType.Farmers,
    },
-   { code: "622", cn_name: "長濱鄉農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "622", cn_name: "長濱鄉農會", tag: BankType.Farmers },
    {
       code: "624",
       cn_name: "澎湖縣農會",
-      en_name: undefined,
       link: "https://www.phfafresh.org.tw/",
       tag: BankType.Farmers,
    },
@@ -1036,7 +999,7 @@ export const BankData: BankCodeType[] = [
       link: "https://www.tcfarmers.org.tw/",
       tag: BankType.Farmers,
    },
-   { code: "627", cn_name: "連江縣農會", en_name: undefined, link: undefined, tag: BankType.Farmers },
+   { code: "627", cn_name: "連江縣農會", tag: BankType.Farmers },
    {
       code: "700",
       cn_name: "中華郵政",
