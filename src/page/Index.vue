@@ -32,15 +32,15 @@ const BankCodeFiltered = () => {
 <template>
    <main class="p-8">
       <div class="serch-container drop-shadow-serch">
-         <span class="search-icon"><SearchIcon size="1.5x" /></span>
+         <span class="search-icon dark:text-dark-E3F6F5"><SearchIcon size="1.5x" /></span>
          <input
             type="text"
             placeholder="搜尋台灣銀行"
-            class="search-input placeholder:text-slate-400"
+            class="search-input placeholder:text-slate-400 dark:text-dark-E3F6F5 dark:bg-dark-2E3A50"
             v-model="searchInput"
          />
          <span
-            class="clean-icon cursor-pointer"
+            class="clean-icon cursor-pointer dark:text-dark-E3F6F5"
             @click="searchInput = undefined"
             :class="{ '!hidden': searchInput === undefined }"
             ><XIcon size="1.5x"
