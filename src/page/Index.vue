@@ -38,6 +38,7 @@ const BankCodeFiltered = () => {
             placeholder="搜尋台灣銀行"
             class="search-input placeholder:text-slate-400"
             v-model="searchInput"
+            v-on:keyup.esc="searchInput = undefined"
          />
          <span
             class="clean-icon cursor-pointer"
