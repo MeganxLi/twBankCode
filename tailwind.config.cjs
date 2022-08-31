@@ -23,7 +23,8 @@ module.exports = {
          },
          dropShadow: {
             serch: ["0px 1px 2px rgba(0, 0, 0, 0.06)", "0px 1px 3px rgba(0, 0, 0, 0.1)"],
-            list: "0px 8px 8px rgba(0, 0, 0, 0.05)",
+            LightList: "0px 8px 8px rgba(0, 0, 0, 0.05)",
+            DarkList: "0px 10px 10px rgba(14, 14, 14, 0.1)",
          },
          screens: {
             "2xs": { min: "320px", max: "480px" },

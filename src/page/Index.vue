@@ -49,19 +49,23 @@ const BankCodeFiltered = () => {
       {{ searchInput }}
 
       <ol class="list">
-         <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankCodeFiltered()" :key="item">
+         <li
+            class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList"
+            v-for="item in BankCodeFiltered()"
+            :key="item"
+         >
             <fieldset>
                <div class="flex justify-between items-center pb-3">
-                  <span class="text-xl font-medium text-light-2C698D">{{ item.code }}</span>
+                  <span class="text-xl font-medium text-light-2C698D dark:text-dark-BAE8E8">{{ item.code }}</span>
                   <a
-                     class="bg-light-2C698D/10 rounded-full p-1"
+                     class="bg-light-2C698D/10 rounded-full p-1 dark:bg-dark-BAE8E8/10"
                      target="_blank"
                      :href="item.link"
                      :class="{ hidden: item.link === undefined }"
-                     ><LinkIcon size="0.9x" class="text-light-2C698D/70"
+                     ><LinkIcon size="0.9x" stroke-width="3" class="text-light-2C698D/70 dark:text-dark-4A84A6"
                   /></a>
                </div>
-               <p class="text-base">{{ item.cn_name }}</p>
+               <p class="text-base dark:text-dark-E3F6F5/75">{{ item.cn_name }}</p>
                <p class="text-base text-gray-400">{{ item.en_name }}</p>
             </fieldset>
          </li>
