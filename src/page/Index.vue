@@ -2,6 +2,7 @@
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
 import { BankData } from "../utils/BankData";
+import ToTop from "../components/ToTop.vue";
 
 const searchInput = ref<string>();
 
@@ -70,5 +71,6 @@ const BankCodeFiltered = () => {
             </fieldset>
          </li>
       </ol>
+      <ToTop />
    </main>
 </template>
