@@ -12,6 +12,8 @@ module.exports = {
                ACD5ED: "#ACD5ED",
                "2C698D": "#2c698d",
                272643: "#272643",
+               E2EAF1: "#E2EAF1",
+               BACDDB: "#BACDDB",
             },
             dark: {
                E3F6F5: "#E3F6F5",
@@ -19,6 +21,8 @@ module.exports = {
                "4A84A6": "#4A84A6",
                "2E3A50": "#2E3A50",
                "242E42": "#242E42",
+               "263A51": "#263A51",
+               355070: "#355070",
             },
          },
          dropShadow: {
