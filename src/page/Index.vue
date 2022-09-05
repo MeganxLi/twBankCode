@@ -9,22 +9,12 @@ const BankCodeSort = BankData.sort(function (a, b) {
    return a.code - b.code;
 });
 
-const serchVal = () => {
-   if (searchInput.value !== undefined) searchInput.value.trim().toLowerCase();
-};
-
-const flatten = (input) => {
-   if (typeof input === "object") {
-      return (Array.isArray(input) ? input : Object.values(input)).reduce((acc, x) => acc.concat(flatten(x)), []);
-   } else {
-      return [input];
-   }
-};
-
 const BankCodeFiltered = () => {
    if (searchInput.value === undefined) return BankCodeSort;
    return BankCodeSort.filter((list: BankCodeType) => {
-      return flatten(list).includes(searchInput.value.trim().toLowerCase());
+      return Object.keys(list).some((key) => {
+         return ("" + list[key]).toLowerCase().includes(searchInput.value.trim().toLowerCase());
+      });
    });
 };
 </script>
