@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
-import { BankData } from "../utils/BankData";
+import { BankData, uploadBankDate } from "../utils/BankData";
 
 const searchInput = ref<string>();
 
@@ -16,6 +16,16 @@ const BankCodeFiltered = () => {
          return ("" + list[key]).toLowerCase().includes(searchInput.value.trim().toLowerCase());
       });
    });
+};
+
+const fileDate = () => {
+   var newDate = new Date(document.lastModified);
+
+   const leadingZeros = (num: number): string => {
+      return num.toString().padStart(2, "0");
+   };
+
+   return newDate.getFullYear() + "/" + leadingZeros(newDate.getMonth() + 1) + "/" + leadingZeros(newDate.getDate());
 };
 </script>
 
@@ -39,6 +49,7 @@ const BankCodeFiltered = () => {
       </div>
       {{ searchInput }}
 
+      <p class="text-xs mb-4">更新日期： {{ uploadBankDate }}</p>
       <ol class="list">
          <li class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-list" v-for="item in BankCodeFiltered()" :key="item">
             <fieldset>
