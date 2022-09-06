@@ -1,3 +1,5 @@
+export const uploadBankDate = "2022/09/05";
+
 enum BankType {
    Bank = "銀行",
    Credit_Union = "信用合作社",
@@ -36,7 +38,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Taiwan Cooperative Bank",
       link: "https://www.tcb-bank.com.tw",
       tag: BankType.Bank,
-      nickname: ["合庫商銀"],
+      nickname: ["合庫商銀", "合庫"],
    },
    {
       code: "007",
@@ -78,7 +80,7 @@ export const BankData: BankCodeType[] = [
    },
    {
       code: "012",
-      cn_name: "台北富邦",
+      cn_name: "台北富邦銀行",
       en_name: "Taipei Fubon Bank",
       link: "https://ebank.taipeifubon.com.tw",
       tag: BankType.Bank,
@@ -88,6 +90,13 @@ export const BankData: BankCodeType[] = [
       cn_name: "國泰世華商業銀行",
       en_name: "Cathay United Bank",
       link: "https://www.cathaybk.com.tw",
+      tag: BankType.Bank,
+   },
+   {
+      code: "015",
+      cn_name: "輸出入銀行",
+      en_name: "Export-Import Bank of the Republic of China",
+      link: "	http://www.eximbank.com.tw",
       tag: BankType.Bank,
    },
    {
@@ -103,7 +112,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Mega International Commercial Bank",
       link: "https://www.megabank.com.tw",
       tag: BankType.Bank,
-      nickname: ["兆豐商銀"],
+      nickname: ["兆豐商銀", "兆豐銀行"],
    },
    {
       code: "018",
@@ -134,6 +143,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Australia & New Zealand Banking Group Limited",
       link: "https://www.anz.com/institutional/global/taiwan/zh-hant/",
       tag: BankType.Bank,
+      nickname: ["澳盛台灣"],
    },
    {
       code: "040",
@@ -141,6 +151,14 @@ export const BankData: BankCodeType[] = [
       en_name: "China Development Industrial Bank",
       link: "https://www.cdfholding.com/",
       tag: BankType.Bank,
+   },
+   {
+      code: "048",
+      cn_name: "王道商業銀行",
+      en_name: "O-Bank",
+      link: "https://www.o-bank.com/",
+      tag: BankType.Bank,
+      nickname: ["王道銀行"],
    },
    {
       code: "050",
@@ -163,6 +181,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Taichung Commercial Bank",
       link: "https://www.tcbbank.com.tw/",
       tag: BankType.Bank,
+      nickname: ["台中商銀"],
    },
    {
       code: "054",
@@ -1069,6 +1088,7 @@ export const BankData: BankCodeType[] = [
       en_name: "JihSun International Commercial Bank",
       link: "https://www.jihsunbank.com.tw/",
       tag: BankType.Bank,
+      nickname: ["日盛銀行"],
    },
    {
       code: "816",
@@ -1103,13 +1123,6 @@ export const BankData: BankCodeType[] = [
       cn_name: "樂天國際商業銀行",
       en_name: "Rakuten Bank",
       link: "https://www.rakuten-bank.com.tw",
-      tag: BankType.Bank,
-   },
-   {
-      code: "048",
-      cn_name: "王道商業銀行",
-      en_name: "O-Bank",
-      link: "https://www.o-bank.com/",
       tag: BankType.Bank,
    },
    {
