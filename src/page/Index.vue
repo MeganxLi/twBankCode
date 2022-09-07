@@ -29,14 +29,36 @@ const fileDate = () => {
 };
 </script>
 
+<script lang="ts">
+export default {
+   name: "search-onKeyPress",
+   methods: {
+      onKeyPress(event) {
+         //是否點擊 "/"
+         if (event.key !== "/") return;
+
+         //若已在input裡面，跳出不判斷
+         if (document.activeElement === this.$refs.searchBank) return;
+
+         event.preventDefault();
+         this.$refs.searchBank.focus();
+      },
+   },
+   mounted() {
+      window.addEventListener("keypress", this.onKeyPress);
+   },
+};
+</script>
+
 <template>
    <main class="p-8">
       <div class="serch-container drop-shadow-serch">
          <span class="search-icon"><SearchIcon size="1.5x" /></span>
          <input
             type="text"
-            placeholder="搜尋台灣銀行"
+            placeholder="按鍵 '/' 搜尋台灣銀行"
             class="search-input placeholder:text-slate-400"
+            ref="searchBank"
             v-model="searchInput"
             v-on:keyup.esc="searchInput = undefined"
          />
