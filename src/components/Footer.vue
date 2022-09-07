@@ -9,7 +9,7 @@ const chagneEnable = function () {
 </script>
 
 <template>
-   <footer class="flex items-center flex-col text-sm">
+   <footer class="flex items-center flex-col text-sm pb-4">
       <p>
          Made by @
          <a href="https://github.com/MeganxLi" class="text-light-2C698D visited:text-light-2C698D">Megan Lee</a>

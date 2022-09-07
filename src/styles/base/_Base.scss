@@ -30,8 +30,12 @@ body {
       "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+   //滾動動畫 Firefox 支援
+   scroll-behavior: smooth;
 }
-
+div {
+   scroll-behavior: smooth;
+}
 @layer base {
    #Header,
    main {
