@@ -70,9 +70,8 @@ export default {
             ><XIcon size="1.5x"
          /></span>
       </div>
-      {{ searchInput }}
 
-      <p class="text-xs mb-4">更新日期： {{ uploadBankDate }}</p>
+      <p class="text-xs mb-4 text-gray-400">更新日期： {{ uploadBankDate }}</p>
       <ol class="list">
          <li
             class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList"
