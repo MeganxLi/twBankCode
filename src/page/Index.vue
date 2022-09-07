@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
-<<<<<<< HEAD
 import { BankData, uploadBankDate } from "../utils/BankData";
-=======
-import { BankData } from "../utils/BankData";
 import ToTop from "../components/ToTop.vue";
->>>>>>> feat/DarkTheme
 
 const searchInput = ref<string>();
 
