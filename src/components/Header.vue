@@ -16,10 +16,10 @@ const chagneEnable = function () {
 </script>
 
 <template>
-   <header id="Header" class="dark:text-dark-BAE8E8">
-      <a href="">GitHub</a>
+   <header id="Header">
+      <a class="dark:text-dark-BAE8E8" href="">GitHub</a>
 
-      <button @click="chagneEnable">
+      <button class="dark:text-dark-BAE8E8" @click="chagneEnable">
          <MoonIcon v-show="!bEnabled" size="1.5x" fill="currentColor" />
          <SunIcon v-show="bEnabled" size="1.5x" />
       </button>

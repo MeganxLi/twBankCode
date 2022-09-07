@@ -4,8 +4,9 @@
       @apply px-3 py-3 my-0 mb-20 mx-auto rounded-lg;
       @apply bg-light-FFFFFF text-light-272643;
       @apply focus-within:outline focus-within:outline-[1px] focus-within:outline-light-ACD5ED;
-      @apply grid items-center grid-cols-[max-content_auto_max-content] gap-2;
+      @apply grid items-center grid-cols-[max-content_auto_max-content] gap-3;
       @apply w-full max-w-3xl;
+      @apply dark:bg-dark-2E3A50;
    }
    .search-icon,
    .clean-icon {

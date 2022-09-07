@@ -1,0 +1,10 @@
+@layer components {
+   #ToTop {
+      @apply bg-light-E2EAF1 hover:bg-light-BACDDB dark:bg-dark-263A51 dark:hover:bg-dark-355070 cursor-pointer drop-shadow-serch;
+      @apply w-12 h-12 text-center;
+      @apply fixed right-9 bottom-9 rounded-full z-30;
+      .up-icon {
+         @apply inline-block h-full text-light-2C698D dark:text-dark-BAE8E8;
+      }
+   }
+}
