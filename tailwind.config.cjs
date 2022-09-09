@@ -14,6 +14,7 @@ module.exports = {
                272643: "#272643",
                E2EAF1: "#E2EAF1",
                BACDDB: "#BACDDB",
+               ACD5EDBF: "#ACD5EDBF",
             },
             dark: {
                E3F6F5: "#E3F6F5",

@@ -70,11 +70,11 @@ export default {
             ><XIcon size="1.5x"
          /></span>
       </div>
-      {{ BankCodeFiltered() }}
+
       <p class="text-xs mb-4 text-gray-400">更新日期： {{ uploadBankDate }}</p>
       <ol class="list">
          <li
-            class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList"
+            class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList hover:outline hover:outline-[1px] hover:outline-light-ACD5EDBF"
             v-for="item in BankCodeFiltered()"
             :key="item.cn_name"
          >
