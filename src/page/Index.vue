@@ -6,15 +6,15 @@ import ToTop from "../components/ToTop.vue";
 
 const searchInput = ref<string>();
 
-const BankCodeSort = BankData.sort(function (a, b) {
-   return a.code - b.code;
+const BankCodeSort = BankData.sort(function (a: BankCodeType, b: BankCodeType) {
+   return Number(a.code) - Number(b.code);
 });
 
 const BankCodeFiltered = () => {
    if (searchInput.value === undefined) return BankCodeSort;
-   return BankCodeSort.filter((list: BankCodeType) => {
-      return Object.keys(list).some((key) => {
-         return ("" + list[key]).toLowerCase().includes(searchInput.value.trim().toLowerCase());
+   return BankCodeSort.filter((list: { [key: string]: any }) => {
+      return Object.keys(list).some((key: string) => {
+         return ("" + list[key]).toLowerCase().includes(searchInput.value?.trim().toLowerCase()!);
       });
    });
 };
@@ -34,7 +34,7 @@ const fileDate = () => {
 export default {
    name: "search-onKeyPress",
    methods: {
-      onKeyPress(event) {
+      onKeyPress(event: any) {
          //是否點擊 "/"
          if (event.key !== "/") return;
 
@@ -42,7 +42,7 @@ export default {
          if (document.activeElement === this.$refs.searchBank) return;
 
          event.preventDefault();
-         this.$refs.searchBank.focus();
+         (this.$refs["searchBank"] as any).focus();
       },
    },
    mounted() {
@@ -70,13 +70,13 @@ export default {
             ><XIcon size="1.5x"
          /></span>
       </div>
-
+      {{ BankCodeFiltered() }}
       <p class="text-xs mb-4 text-gray-400">更新日期： {{ uploadBankDate }}</p>
       <ol class="list">
          <li
             class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList"
             v-for="item in BankCodeFiltered()"
-            :key="item"
+            :key="item.cn_name"
          >
             <fieldset>
                <div class="flex justify-between items-center pb-3">
