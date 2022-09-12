@@ -9,19 +9,22 @@
 ## 頁面規劃
 
 ### 工具
-- template of: Vite + Vue 3 +TypeScript
-- tailwindcss: v3.x
+
+-  template of: Vite + Vue 3 +TypeScript
+-  tailwindcss: v3.x
 
 ### 功能
-- 深淺模式
-- 搜尋輸入框
-  - 搜尋銀行代碼
-  - 搜尋 esc 清除 input 資料
-  - 搜尋 / 對焦 input
-- 銀行資料清單
-- 資料更新日期
-- To top 按鈕
 
-*待增加功能*
-- [ ] 金融機構分類及數量
-- [ ] 點擊分類可快速搜尋
+-  深淺模式 (localStorage)
+-  搜尋輸入框
+   -  搜尋銀行代碼
+   -  搜尋 esc 清除 input 資料
+   -  搜尋 / 對焦 input
+-  銀行資料清單
+-  資料更新日期
+-  To top 按鈕
+
+_待增加功能_
+
+-  [ ] 金融機構分類及數量
+-  [ ] 點擊分類可快速搜尋
