@@ -2,16 +2,26 @@
 import { ref } from "vue";
 import { MoonIcon, SunIcon, ActivityIcon } from "@zhuowenli/vue-feather-icons";
 
-const bEnabled = ref<boolean>(false);
+const bEnabled = ref<boolean>(false); //true: dark, false: light
 
-const chagneEnable = function () {
-   bEnabled.value = !bEnabled.value;
-
-   if (bEnabled.value) {
+const addClassDark = (darkEnabled: boolean) => {
+   if (darkEnabled) {
       document.querySelector("html")?.classList.add("dark");
    } else {
       document.querySelector("html")?.classList.remove("dark");
    }
+};
+
+if (localStorage.getItem("storedTheme") !== null) {
+   bEnabled.value = JSON.parse(localStorage.getItem("storedTheme"));
+   addClassDark(bEnabled.value);
+}
+
+const chagneEnable = function () {
+   bEnabled.value = !bEnabled.value;
+
+   localStorage.setItem("storedTheme", bEnabled.value);
+   addClassDark(bEnabled.value);
 };
 </script>
 
