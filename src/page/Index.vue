@@ -90,7 +90,11 @@ export default {
                   /></a>
                </div>
                <p class="text-base dark:text-dark-E3F6F5/75">{{ item.cn_name }}</p>
-               <p class="text-base text-gray-400">{{ item.en_name }}</p>
+               <p class="text-base text-gray-400 mb-3">{{ item.en_name }}</p>
+               <span
+                  class="px-2 py-1 rounded-md text-sm bg-light-2C698D/10 dark:text-dark-E3F6F5/60 dark:bg-dark-242E42"
+                  >{{ item.tag }}</span
+               >
             </fieldset>
          </li>
       </ol>
