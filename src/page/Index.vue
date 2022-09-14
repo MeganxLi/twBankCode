@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
 import { ref } from "vue";
-import { BankData, uploadBankDate } from "../utils/BankData";
+import { BankData, BankType, uploadBankDate } from "../utils/BankData";
 import ToTop from "../components/ToTop.vue";
 
 const searchInput = ref<string>();
@@ -71,7 +71,21 @@ export default {
          /></span>
       </div>
 
-      <p class="text-xs mb-4 text-gray-400">更新日期： {{ uploadBankDate }}</p>
+      <div class="mb-4 flex justify-between items-center">
+         <ul class="list-tag">
+            <li
+               class="mr-2 px-2 py-1 inline-block text-sm font-semibold rounded-md bg-light-2C698D/10 dark:text-dark-E3F6F5/60 dark:bg-dark-242E42"
+               v-for="value in BankType"
+               :key="value"
+            >
+               {{ value }}
+               <span class="text-xs text-gray-500"
+                  >({{ BankCodeFiltered().filter((word) => word.tag === value).length }})</span
+               >
+            </li>
+         </ul>
+         <p class="text-xs text-gray-400">更新日期： {{ uploadBankDate }}</p>
+      </div>
       <ol class="list">
          <li
             class="p-3 bg-light-FFFFFF rounded-lg drop-shadow-LightList dark:bg-dark-2E3A50 dark:drop-shadow-DarkList hover:outline hover:outline-[1px] hover:outline-light-ACD5EDBF"

@@ -1,13 +1,13 @@
 export const uploadBankDate = "2022/09/05";
 
-enum BankType {
-   Bank = "銀行",
-   Credit_Union = "信用合作社",
-   Farmers = "農會",
-   Fisherperson = "漁會",
-   Post = "郵局",
-   Pay = "行動支付",
-}
+export const BankType = {
+   Bank: "銀行",
+   Credit_Union: "信用合作社",
+   Farmers: "農會",
+   Fisherperson: "漁會",
+   Post: "郵局",
+   Pay: "行動支付",
+};
 
 export const BankData: BankCodeType[] = [
    {
