@@ -13,14 +13,14 @@ const addClassDark = (darkEnabled: boolean) => {
 };
 
 if (localStorage.getItem("storedTheme") !== null) {
-   bEnabled.value = JSON.parse(localStorage.getItem("storedTheme"));
+   bEnabled.value = JSON.parse(localStorage.getItem("storedTheme")!);
    addClassDark(bEnabled.value);
 }
 
 const chagneEnable = function () {
    bEnabled.value = !bEnabled.value;
 
-   localStorage.setItem("storedTheme", bEnabled.value);
+   localStorage.setItem("storedTheme", bEnabled.value.toString());
    addClassDark(bEnabled.value);
 };
 </script>
