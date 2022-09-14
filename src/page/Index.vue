@@ -58,7 +58,7 @@ export default {
          <input
             type="text"
             placeholder="按鍵 '/' 鍵即可跳至搜尋框"
-            class="search-input placeholder:text-slate-400 dark:text-dark-E3F6F5 dark:bg-dark-2E3A50"
+            class="search-input w-full placeholder:text-slate-400 placeholder-shown:text-ellipsis dark:text-dark-E3F6F5 dark:bg-dark-2E3A50"
             ref="searchBank"
             v-model="searchInput"
             v-on:keyup.esc="searchInput = undefined"
