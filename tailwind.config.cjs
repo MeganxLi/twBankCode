@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
@@ -32,8 +33,11 @@ module.exports = {
             DarkList: "0px 10px 10px rgba(14, 14, 14, 0.1)",
          },
          screens: {
-            "2xs": { min: "320px", max: "480px" },
-            xs: { min: "480px", max: "640px" },
+            "2xs": { max: "320px" },
+            xs: { max: "480px" },
+            sm: { max: "640px" },
+            md: { max: "768px" },
+            lg: { max: "960px" },
          },
       },
    },
