@@ -71,15 +71,14 @@ export default {
          /></span>
       </div>
 
-      <div class="mb-4 flex justify-between items-center">
+      <div class="mb-4 flex justify-between items-center gap-y-1.5 lg:flex-col-reverse lg:items-start">
          <ul class="list-tag">
-            <li
-               class="mr-2 px-2 py-1 inline-block text-sm font-semibold rounded-md bg-light-2C698D/10 dark:text-dark-E3F6F5/60 dark:bg-dark-242E42"
-               v-for="value in BankType"
-               :key="value"
-            >
+            <li class="bank-tag" :class="'bank-tag-checked'">
+               All <span class="bank-tag-total">({{ BankData.length }})</span>
+            </li>
+            <li class="bank-tag" v-for="value in BankType" :key="value">
                {{ value }}
-               <span class="text-xs text-gray-500"
+               <span class="bank-tag-total"
                   >({{ BankCodeFiltered().filter((word) => word.tag === value).length }})</span
                >
             </li>
