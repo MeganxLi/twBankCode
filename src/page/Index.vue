@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import { BankData, BankType, uploadBankDate } from "../utils/BankData";
 import ToTop from "../components/ToTop.vue";
 
 const searchInput = ref<string>();
+const checkedTag = ref<string[]>([]);
+const selectAllTags = ref<boolean>(true);
 
 const BankCodeSort = BankData.sort(function (a: BankCodeType, b: BankCodeType) {
    return Number(a.code) - Number(b.code);
@@ -27,6 +29,17 @@ const fileDate = () => {
    };
 
    return newDate.getFullYear() + "/" + leadingZeros(newDate.getMonth() + 1) + "/" + leadingZeros(newDate.getDate());
+};
+
+const changeCheckedTag = (vul) => {
+   const tagIdx = checkedTag.value.indexOf(vul);
+
+   if (tagIdx === -1) {
+      checkedTag.value = [...checkedTag.value, vul];
+   } else {
+      checkedTag.value.splice(tagIdx, 1);
+   }
+   selectAllTags.value = checkedTag.value.length === Object.keys(BankType).length;
 };
 </script>
 
@@ -70,13 +83,25 @@ export default {
             ><XIcon size="1.5x"
          /></span>
       </div>
-
+      {{ checkedTag }}
       <div class="mb-4 flex justify-between items-center gap-y-1.5 lg:flex-col-reverse lg:items-start">
          <ul class="list-tag">
-            <li class="bank-tag" :class="'bank-tag-checked'">
+            <li
+               class="bank-tag"
+               :class="{
+                  'bank-tag-checked': checkedTag.length === 0 || selectAllTags,
+               }"
+            >
                All <span class="bank-tag-total">({{ BankData.length }})</span>
             </li>
-            <li class="bank-tag" v-for="value in BankType" :key="value">
+            <li
+               class="bank-tag"
+               v-for="value in BankType"
+               :key="value"
+               :ref="value"
+               v-on:click="changeCheckedTag(value)"
+               :class="{ 'bank-tag-checked': checkedTag.indexOf(value) !== -1 }"
+            >
                {{ value }}
                <span class="bank-tag-total"
                   >({{ BankCodeFiltered().filter((word) => word.tag === value).length }})</span
