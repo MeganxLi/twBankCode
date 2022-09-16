@@ -91,7 +91,7 @@ export default {
             v-for="item in BankCodeFiltered()"
             :key="item.cn_name"
          >
-            <fieldset>
+            <fieldset class="h-full flex flex-col">
                <div class="flex justify-between items-center pb-3">
                   <span class="text-xl font-medium text-light-2C698D dark:text-dark-BAE8E8">{{ item.code }}</span>
                   <a
@@ -105,7 +105,7 @@ export default {
                <p class="text-base dark:text-dark-E3F6F5/75">{{ item.cn_name }}</p>
                <p class="text-base text-gray-400 mb-3">{{ item.en_name }}</p>
                <span
-                  class="px-2 py-1 rounded-md text-sm bg-light-2C698D/10 dark:text-dark-E3F6F5/60 dark:bg-dark-242E42"
+                  class="w-fit mt-auto px-2 py-1 rounded-md text-sm bg-light-2C698D/10 dark:text-dark-E3F6F5/60 dark:bg-dark-242E42"
                   >{{ item.tag }}</span
                >
             </fieldset>
