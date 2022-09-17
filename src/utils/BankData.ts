@@ -1,4 +1,4 @@
-export const uploadBankDate = "2022/09/05";
+export const uploadBankDate = "2022/09/17";
 
 export const BankType = {
    Bank: "銀行",
@@ -23,14 +23,15 @@ export const BankData: BankCodeType[] = [
       en_name: "Bank of Taiwan",
       link: "https://www.bot.com.tw",
       tag: BankType.Bank,
+      nickname: ["台銀", "臺銀"],
    },
-   //excel
    {
       code: "005",
       cn_name: "臺灣土地銀行",
       en_name: "Land Bank of Taiwan",
       link: "https://www.landbank.com.tw/",
       tag: BankType.Bank,
+      nickname: ["土銀"],
    },
    {
       code: "006",
@@ -61,7 +62,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Chang Hwa Commercial Bank",
       link: "https://www.bankchb.com",
       tag: BankType.Bank,
-      nickname: ["彰化銀行"],
+      nickname: ["彰化銀行", "彰銀"],
    },
    {
       code: "010",
@@ -84,6 +85,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Taipei Fubon Bank",
       link: "https://ebank.taipeifubon.com.tw",
       tag: BankType.Bank,
+      nickname: ["北富銀"],
    },
    {
       code: "013",
@@ -166,7 +168,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Taiwan Business Bank",
       link: "https://www.tbb.com.tw/",
       tag: BankType.Bank,
-      nickname: ["臺灣企銀"],
+      nickname: ["臺灣企銀", "臺灣中小企銀", "臺企銀"],
    },
    {
       code: "052",
@@ -224,6 +226,7 @@ export const BankData: BankCodeType[] = [
       en_name: "Shin Kong Bank",
       link: "https://www.skbank.com.tw/",
       tag: BankType.Bank,
+      nickname: ["新光商銀", "新光銀", "SKBank", "SKCB"],
    },
    {
       code: "104",
