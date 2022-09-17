@@ -12,7 +12,9 @@ const chagneEnable = function () {
    <footer class="flex items-center flex-col text-sm pb-4">
       <p>
          Made by @
-         <a href="https://github.com/MeganxLi" class="text-light-2C698D visited:text-light-2C698D">Megan Lee</a>
+         <a href="https://github.com/MeganxLi" class="text-light-2C698D visited:text-light-2C698D dark:text-dark-BAE8E8"
+            >Megan Lee</a
+         >
       </p>
    </footer>
 </template>
