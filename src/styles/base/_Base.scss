@@ -1,18 +1,5 @@
-@font-face {
-   font-family: "Noto Sans TC";
-   font-style: normal;
-   font-weight: 400;
-   font-display: swap;
-   src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("/assets/fonts/NotoSansCJKtc-Regular.otf");
-}
-
-@font-face {
-   font-family: "Noto Sans TC";
-   font-style: normal;
-   font-weight: 700;
-   font-display: swap;
-   src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("/assets/fonts/NotoSansCJKtc-Bold.otf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,500;0,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap");
 
 * {
    box-sizing: border-box;
@@ -26,8 +13,8 @@ body {
 }
 
 body {
-   font-family: "Noto Sas TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   font-family: "Nunito", "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+      "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    //滾動動畫 Firefox 支援
