@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { ref, watchEffect } from "vue";
 import { SearchIcon, XIcon, LinkIcon } from "@zhuowenli/vue-feather-icons";
-import { ref, reactive } from "vue";
 import { BankData, BankType, uploadBankDate } from "../utils/BankData";
 import ToTop from "../components/ToTop.vue";
 
@@ -12,9 +12,18 @@ const BankCodeSort = BankData.sort(function (a: BankCodeType, b: BankCodeType) {
    return Number(a.code) - Number(b.code);
 });
 
-const BankCodeFiltered = () => {
-   if (searchInput.value === undefined) return BankCodeSort;
+const selestTagsBankList = () => {
+   if (selectAllTags.value) return BankCodeSort;
    return BankCodeSort.filter((list: { [key: string]: any }) => {
+      return checkedTag.value.some((tag: string) => {
+         return list.tag === tag;
+      });
+   });
+};
+
+const BankCodeFiltered = () => {
+   if (searchInput.value === undefined) return selestTagsBankList();
+   return selestTagsBankList().filter((list: { [key: string]: any }) => {
       return Object.keys(list).some((key: string) => {
          return ("" + list[key]).toLowerCase().includes(searchInput.value?.trim().toLowerCase()!);
       });
@@ -31,16 +40,23 @@ const fileDate = () => {
    return newDate.getFullYear() + "/" + leadingZeros(newDate.getMonth() + 1) + "/" + leadingZeros(newDate.getDate());
 };
 
-const changeCheckedTag = (vul) => {
-   const tagIdx = checkedTag.value.indexOf(vul);
+const changeCheckedTag = (vul: string) => {
+   //select All
+   if (vul === "All") return (checkedTag.value = []);
 
+   //select a single tag
+   const tagIdx = checkedTag.value.indexOf(vul);
    if (tagIdx === -1) {
       checkedTag.value = [...checkedTag.value, vul];
    } else {
       checkedTag.value.splice(tagIdx, 1);
    }
-   selectAllTags.value = checkedTag.value.length === Object.keys(BankType).length;
 };
+
+//類似 React useEffect
+watchEffect(() => {
+   selectAllTags.value = checkedTag.value.length === Object.keys(BankType).length || checkedTag.value.length === 0;
+});
 </script>
 
 <script lang="ts">
@@ -83,14 +99,15 @@ export default {
             ><XIcon size="1.5x"
          /></span>
       </div>
-      {{ checkedTag }}
+
       <div class="mb-4 flex justify-between items-center gap-y-1.5 lg:flex-col-reverse lg:items-start">
          <ul class="list-tag">
             <li
                class="bank-tag"
                :class="{
-                  'bank-tag-checked': checkedTag.length === 0 || selectAllTags,
+                  'bank-tag-checked': selectAllTags,
                }"
+               v-on:click="changeCheckedTag('All')"
             >
                All <span class="bank-tag-total">({{ BankData.length }})</span>
             </li>
@@ -103,9 +120,7 @@ export default {
                :class="{ 'bank-tag-checked': checkedTag.indexOf(value) !== -1 }"
             >
                {{ value }}
-               <span class="bank-tag-total"
-                  >({{ BankCodeFiltered().filter((word) => word.tag === value).length }})</span
-               >
+               <span class="bank-tag-total">({{ BankData.filter((word) => word.tag === value).length }})</span>
             </li>
          </ul>
          <p class="text-xs text-gray-400">更新日期： {{ uploadBankDate }}</p>
