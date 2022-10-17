@@ -2,7 +2,7 @@
 
 搜尋台灣金融機構代碼查詢，包含提供中英文金融機構名稱、金融機構代碼及金融機構網頁連結。
 
-## UI (Figma)
+## UI
 ![Frame 28](https://user-images.githubusercontent.com/87239200/190860387-eb2e865d-1b61-4859-bd09-d1ac3e4b1572.png)
 
 
@@ -10,6 +10,7 @@
 
 ### 工具
 
+-  UI/UX: Figma
 -  template of: Vite + Vue 3 +TypeScript
 -  tailwindcss: v3.x
 
