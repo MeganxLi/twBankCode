@@ -11,8 +11,8 @@
 ### 工具
 
 -  UI/UX: Figma
--  template of: Vite + Vue 3 +TypeScript
--  tailwindcss: v3.x
+-  Template of: Vite + Vue 3 +TypeScript
+-  CSS: Tailwindcss v3.x
 
 ### 功能
 
